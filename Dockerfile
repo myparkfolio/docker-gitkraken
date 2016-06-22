@@ -16,6 +16,7 @@ RUN  apt-get update -y \
 	python \
 	gvfs-bin \
 	xdg-utils \
+	firefox \
 	libgnome-keyring0
 
 RUN  wget --quiet "https://release.gitkraken.com/linux/gitkraken-amd64.deb" -O /gitkraken-amd64.deb \

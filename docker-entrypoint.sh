@@ -14,5 +14,5 @@ if [ $? -eq 1 ]; then
     chown ${uid}:${gid} -R /home/developer
 fi
 
-sudo -E -u developer "$@"
+su developer -c "$@"
 
