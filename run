@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run --name gitkraken -ti --rm \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -e DISPLAY=$DISPLAY \
+  -v $(pwd):/home/developer/data/ \
+  -e UID=`id -u` -e GID=`id -g` \
+  myparkfolio/gitkraken
