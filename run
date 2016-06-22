@@ -5,4 +5,5 @@ docker run --name gitkraken -ti --rm \
   -e DISPLAY=$DISPLAY \
   -v $(pwd):/home/developer/data/ \
   -e UID=`id -u` -e GID=`id -g` \
+  -v ~/.ssh/:/home/developer/.ssh/ \
   myparkfolio/gitkraken
