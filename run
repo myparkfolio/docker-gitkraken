@@ -1,9 +1,17 @@
 #!/bin/bash
 
+mkdir -p $HOME/.gitkraken/
+
+if [ ! -f $HOME/.gitconfig ]; then
+  touch $HOME/.gitconfig
+fi
+
 docker run --name gitkraken -ti --rm \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -e DISPLAY=$DISPLAY \
   -v $(pwd):/home/developer/data/ \
+  -v $HOME/.gitkraken/:/home/developer/.gitkraken/ \
+  -v $HOME/.gitconfig:/home/developer/.gitconfig \
   -e UID=`id -u` -e GID=`id -g` \
   -v ~/.ssh/:/home/developer/.ssh/ \
   myparkfolio/gitkraken
