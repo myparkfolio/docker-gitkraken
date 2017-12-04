@@ -6,18 +6,21 @@ RUN  apt-get update -y \
   && apt-get upgrade -y \
   && apt-get -f install \
   && apt-get install -y \
-    wget \
-	gconf2 \
-	gconf-service \
-	libgtk2.0-0 \
-	libnotify4 \
-	libxtst6 \
-	libnss3 \
-	python \
-	gvfs-bin \
-	xdg-utils \
-	firefox \
-	libgnome-keyring0
+     wget \
+     gconf2 \
+     gconf-service \
+     libgtk2.0-0 \
+     libnotify4 \
+     libxtst6 \
+     libnss3 \
+     python \
+     gvfs-bin \
+     xdg-utils \
+     firefox \
+     libxss1 \
+     curl \
+     libcurl3 \
+     libgnome-keyring0
 
 RUN  wget --quiet "https://release.gitkraken.com/linux/gitkraken-amd64.deb" -O /gitkraken-amd64.deb \
   && dpkg -i /gitkraken-amd64.deb \
