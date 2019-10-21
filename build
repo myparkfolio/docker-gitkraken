@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t myparkfolio/gitkraken .
+docker build -t myparkfolio/gitkraken 82.
